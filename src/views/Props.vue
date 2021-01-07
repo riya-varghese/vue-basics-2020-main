@@ -10,8 +10,8 @@ import Child from "../components/Child";
 export default {
   data() {
     return {
-      greeting: "Welcome to Props",
-      icecream: ["Chocolate", "Vanilla", "Strawberry", "Pistachio"],
+      greeting: "SRY MR. WHALEN",
+      icecream: ["I", "WILL", "DO", "BETTER ASAP"],
     };
   },
   components: {

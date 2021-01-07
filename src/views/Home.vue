@@ -1,15 +1,15 @@
 <template>
   <div class="container">
-    <h1>Hello {{ student }}</h1>
-    <button v-on:click="changeStudent">Change Student</button>
+    <h1> {{ student }}</h1>
+    <button v-on:click="changeStudent">Heads or Tails</button>
     <h3>{{ animal }}</h3>
-    <button @click="changeAnimal">Change Animal</button>
+    <button @click="changeAnimal">Rock Paper Scissors</button>
     <ul>
       <li v-for="animal in animals" :key="animal">{{ animal }}</li>
     </ul>
-    <h2 v-if="isLoggedIn">Welcome</h2>
-    <h2 v-else>Please Login</h2>
-    <button v-if="isLoggedIn" @click="logout">Logout</button>
+    <h2 v-if="isLoggedIn">Not Riya </h2>
+    <h2 v-else>Welcome Riya</h2>
+    <button v-if="isLoggedIn" @click="logout">Begone Imposter</button>
     <button v-else @click="login">Login</button>
   </div>
 </template>
@@ -22,15 +22,15 @@ export default {
   components: {},
   data() {
     return {
-      student: "Harry",
-      animals: ["horse", "savva", "pig", "Zebra", "lion"],
+      student: ["Heads", "Tails"],
+      animals: ["Rock", "Paper", "Scissors"],
       animal: "",
       isLoggedIn: false,
     };
   },
   methods: {
     changeStudent: function() {
-      this.student = "Charlene";
+      this.student = "Tails";
     },
     changeAnimal: function() {
       let number = Math.floor(Math.random() * 5);
